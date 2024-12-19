@@ -22,7 +22,7 @@ $p = query("SELECT * FROM produk WHERE id = $id");
 <body style="margin-left: 50px;">
   <h3>Detail Produk</h3>
   <ul style="list-style-type: none;">
-    <li><img src="img/<?= $p['gambar']; ?>" alt="" width="20% "></li>
+    <li><img src="img/<?= $p['gambar']; ?>" alt="" width="250"></li>
     <li>Nama : <?= $p['nama']; ?></li>
     <li>Jumlah : <?= $p['jumlah']; ?></li>
     <li>Harga : <?= $p['harga']; ?></li><br>

@@ -36,14 +36,16 @@ if(isset($_POST['ubah'])) {
 </head>
 <body>
   <h3>Update Produk</h3>
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $p['id']; ?>">
     <ul>
       <li>
+        <input type="hidden" name="gambar_lama" value="<?= $p['gambar']; ?>">
         <label>
           Gambar : 
-          <input type="text" name="gambar" value="<?= $p['gambar']; ?>">
+          <input type="file" name="gambar" class="gambar" onchange="previewImage()">
         </label>
+        <img src="img/<?= $p['gambar']; ?>" alt="" width="100" style="display:block;" class="img-preview">
       </li>
       <li>
         <label>
@@ -68,5 +70,6 @@ if(isset($_POST['ubah'])) {
       </label>
     </ul>
   </form>
+  <script src="js/script.js"></script>
 </body>
 </html>
