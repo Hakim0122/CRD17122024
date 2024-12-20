@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('img/papku.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home p {
+  margin: 10px;
+  padding: 5px;
+  color: #fff;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+.home h2 {
+  color: #fff;
+  text-align: center;
+  margin: 20px;
+  margin-bottom: -7px;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-daftar {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 50px;
+}
+
+.wrapper .form-box.login {
+  margin-top: -80px;
+}
+
+.wrapper .form-box.daftar {
+  margin-top: -13px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid #fff;
+  margin: 20px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: 5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 20px 0 5px;
+  margin-top: 10px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 0px;
+  font-size: 1.2em;
+  color: #fff;
+  line-height: 57px;
+  margin-top: 12px;
+}
+
+.ingat-saya {
+  font-size: .9em;
+  color: #fff;
+  font-weight: 500;
+  margin: -10px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingat-saya label input {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.ingat-saya a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ingat-saya a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  text-decoration: none;
+  width: 100%;
+  height: 42px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #162938;
+}
+
+.daftar-sekarang {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0 10px;
+}
+
+.daftar-sekarang p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.daftar-sekarang p a:hover {
+  text-decoration: underline;
+}
