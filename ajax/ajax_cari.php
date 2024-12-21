@@ -3,32 +3,26 @@ require '../function.php';
 
 $produk = cari($_GET['keyword']);
 ?>
-<div class="container">
-    <table border="1" cellpaddding="10" cellspacing="0">
-      <tr align="center">
-        <th>Nomer</th>
-        <th>Gambar</th>
-        <th>Nama Produk</th>
-        <th>Aksi</th>
+<table class="table table-bordered text-center align-middle">
+  <thead class="table-dark">
+    <tr>
+      <th>No</th>
+      <th>Gambar</th>
+      <th>Nama Produk</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php $i = 1;
+    foreach ($produk as $p) : ?>
+      <tr>
+        <td><?= $i++; ?></td>
+        <td><img src="img/<?= $p['gambar']; ?>" width="100px" class="img-fluid rounded"></td>
+        <td><?= $p['nama']; ?></td>
+        <td>
+          <a href="detail.php?id=<?= $p['id']; ?>" class="btn btn-outline-success">Lihat Detail</a>
+        </td>
       </tr>
-
-      <?php if (empty($produk)) : ?>
-        <tr>
-          <td colspan="4">
-            <p style="color:red; font-size: italic;" align="center">Data tidak ditemukan</p>
-          </td>
-        </tr>
-      <?php endif; ?>
-
-      <?php $i = 1;
-      foreach ($produk as $p) : ?>
-        <tr align="center">
-          <td><?= $i++; ?></td>
-          <td><img src="img/<?= $p['gambar']; ?>" width="100px"></td>
-          <td><?= $p['nama']; ?></td>
-          <td>
-            <a href="detail.php?id=<?= $p['id']; ?>">Lihat detail</a>
-          </td>
-        </tr>
-      <?php endforeach;  ?>
-    </table><br><br>
+    <?php endforeach; ?>
+  </tbody>
+</table>

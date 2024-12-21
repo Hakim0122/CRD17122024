@@ -1,7 +1,6 @@
-const tombolcari = document.querySelector('.tombol-cari');
-const keyword = document.querySelector('.keyword');
-const container = document.querySelector('.container');
-tombolcari.style.display = 'none';
+const tombolcari = document.querySelector('#tombol-cari');
+const keyword = document.querySelector('#keyword');
+const container = document.querySelector('.jumbroton');
 
 keyword.addEventListener('keyup', function () {
 
