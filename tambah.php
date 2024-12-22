@@ -19,7 +19,6 @@ if (isset($_POST['tambah'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,7 +76,7 @@ if (isset($_POST['tambah'])) {
     .btn-transparent {
       background: rgba(255, 255, 255, 0.2);
       color: #fff;
-      border: 2px solid #333;
+      border: 1px solid #333;
       border-radius: 20px;
     }
 
@@ -106,46 +105,36 @@ if (isset($_POST['tambah'])) {
     }
   </style>
 </head>
-
 <body>
   <div class="card">
     <h3 class="text-center mb-4">Tambah Produk</h3>
-
-    <!-- Success or Error message -->
     <?php if (isset($_POST['tambah']) && isset($tambah)): ?>
       <div class="alert alert-<?php echo $tambah > 0 ? 'success' : 'danger'; ?>" role="alert">
         <?php echo $tambah > 0 ? 'Produk berhasil ditambahkan!' : 'Produk gagal ditambahkan.'; ?>
       </div>
     <?php endif; ?>
-
     <form action="" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="gambar" class="form-label">Gambar Produk</label>
         <input type="file" class="form-control" name="gambar" id="gambar" onchange="previewImage()">
         <img src="img/usm.png" alt="Preview Gambar" class="img-preview mt-3" width="100">
       </div>
-
       <div class="form-group">
         <label for="nama" class="form-label">Nama Produk</label>
         <input type="text" class="form-control" name="nama" id="nama" required autocomplete="off">
       </div>
-
       <div class="form-group">
         <label for="jumlah" class="form-label">Jumlah</label>
         <input type="text" class="form-control" name="jumlah" id="jumlah" required autocomplete="off">
       </div>
-
       <div class="form-group">
         <label for="harga" class="form-label">Harga</label>
         <input type="text" class="form-control" name="harga" id="harga" required autocomplete="off">
       </div>
-
       <button type="submit" name="tambah" class="btn btn-custom w-100 mt-4">Tambah Produk</button>
     </form>
-
     <a href="index.php" class="btn btn-transparent w-100 mt-3">Kembali ke Daftar Produk</a>
   </div>
-
   <script>
     function previewImage() {
       const image = document.querySelector('#gambar');
@@ -162,5 +151,4 @@ if (isset($_POST['tambah'])) {
     }
   </script>
 </body>
-
 </html>

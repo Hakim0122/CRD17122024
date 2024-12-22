@@ -17,9 +17,7 @@ $p = query("SELECT * FROM produk WHERE id = $id");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Produk</title>
-  <!-- Link Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Link Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -86,7 +84,6 @@ $p = query("SELECT * FROM produk WHERE id = $id");
       </div>
     </div>
   </div>
-  <!-- Link Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

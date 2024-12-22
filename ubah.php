@@ -113,35 +113,27 @@ if (isset($_POST['ubah'])) {
     <form action="" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?= $p['id']; ?>">
       <input type="hidden" name="gambar_lama" value="<?= $p['gambar']; ?>">
-
       <div class="form-group">
         <label for="gambar" class="form-label">Gambar Produk</label>
         <input type="file" class="form-control" name="gambar" id="gambar" onchange="previewImage()">
         <img src="img/<?= $p['gambar']; ?>" alt="Preview Gambar" class="img-preview mt-3" width="100">
       </div>
-
       <div class="form-group">
         <label for="nama" class="form-label">Nama Produk</label>
         <input type="text" class="form-control" name="nama" id="nama" required autocomplete="off" value="<?= $p['nama']; ?>">
       </div>
-
       <div class="form-group">
         <label for="jumlah" class="form-label">Jumlah</label>
         <input type="text" class="form-control" name="jumlah" id="jumlah" required autocomplete="off" value="<?= $p['jumlah']; ?>">
       </div>
-
       <div class="form-group">
         <label for="harga" class="form-label">Harga</label>
         <input type="text" class="form-control" name="harga" id="harga" required autocomplete="off" value="<?= $p['harga']; ?>">
       </div>
-
       <button type="submit" name="ubah" class="btn btn-custom w-100 mt-4">Update Produk</button>
     </form>
-
-    <!-- Tombol Kembali -->
     <a href="detail.php?id=<?= $p['id']; ?>" class="btn btn-transparent w-100 mt-3">Kembali ke Detail Produk</a>
   </div>
-
   <script>
     function previewImage() {
       const image = document.querySelector('#gambar');
