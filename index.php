@@ -51,9 +51,6 @@ if (isset($_POST['cari'])) {
       box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     }
 
-    .table td,
-    .table th {}
-
     .table td img {
       width: 100px;
       height: 60px;
