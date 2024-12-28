@@ -7,7 +7,7 @@ require 'function.php';
 
 $id = $_GET['id'];
 
-$p = query("SELECT * FROM produk WHERE id = $id");
+$produk = query("SELECT * FROM produk WHERE id = $id");
 
 ?>
 
@@ -69,10 +69,12 @@ $p = query("SELECT * FROM produk WHERE id = $id");
       <div class="card-body">
         <h3 class="card-title text-center mb-4">Detail Produk</h3>
         <ul class="list-unstyled">
+          <?php foreach ($produk as $p) : ?>
           <li><img src="img/<?= $p['gambar']; ?>" alt="Produk" class="img-fluid"></li>
           <li><strong>Nama:</strong> <?= $p['nama']; ?></li>
           <li><strong>Jumlah:</strong> <?= $p['jumlah']; ?></li>
           <li><strong>Harga:</strong> <?= $p['harga']; ?></li>
+          <?php endforeach; ?>
         </ul>
         <div class="mt-4 text-center">
           <a href="ubah.php?id=<?= $p['id']; ?>" class="btn btn-warning px-4 me-2">Ubah</a>

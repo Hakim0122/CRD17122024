@@ -7,10 +7,6 @@ function query($query){
 
   $result = mysqli_query($conn, $query);
 
-  if (mysqli_num_rows($result) == 1) {
-    return mysqli_fetch_assoc($result);
-  }
-
   $rows = [];
   while ($row = mysqli_fetch_assoc($result)) {
     $rows[] = $row;
@@ -149,8 +145,12 @@ function login($data) {
 
   $username = htmlspecialchars($data['username']);
   $password = htmlspecialchars($data['password']);
+  $query    = "SELECT * FROM user WHERE username = '$username'";
+  $result   = mysqli_query($conn, $query);
 
-  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
+  $user     = mysqli_fetch_assoc($result);
+
+  if ($user) {
     if(password_verify($password, $user['password'])){
       $_SESSION['login'] = true;
       header("Location: index.php");

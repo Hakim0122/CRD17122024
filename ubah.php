@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
-$p = query("SELECT * FROM produk WHERE id = $id");
+$produk = query("SELECT * FROM produk WHERE id = $id");
 
 if (isset($_POST['ubah'])) {
   if (ubah($_POST) > 0) {
@@ -20,7 +20,10 @@ if (isset($_POST['ubah'])) {
     document.location.href='index.php';
     </script>";
   } else {
-    echo "Produk gagal diupdate";
+    echo "<script>
+    alert('Produk gagal diupdate');
+    document.location.href='ubah.php';
+    </script>";
   }
 }
 ?>
@@ -100,6 +103,7 @@ if (isset($_POST['ubah'])) {
 
     .form-control:focus {
       background: transparent;
+      color: white;
     }
 
     .form-group {
@@ -111,6 +115,7 @@ if (isset($_POST['ubah'])) {
   <div class="card">
     <h3 class="text-center mb-4">Update Produk</h3>
     <form action="" method="POST" enctype="multipart/form-data">
+      <?php foreach ($produk as $p) : ?>
       <input type="hidden" name="id" value="<?= $p['id']; ?>">
       <input type="hidden" name="gambar_lama" value="<?= $p['gambar']; ?>">
       <div class="form-group">
@@ -129,6 +134,7 @@ if (isset($_POST['ubah'])) {
       <div class="form-group">
         <label for="harga" class="form-label">Harga</label>
         <input type="text" class="form-control" name="harga" id="harga" required autocomplete="off" value="<?= $p['harga']; ?>">
+        <?php endforeach; ?>
       </div>
       <button type="submit" name="ubah" class="btn btn-custom w-100 mt-4">Update Produk</button>
     </form>
