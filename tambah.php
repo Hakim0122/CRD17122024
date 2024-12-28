@@ -117,7 +117,7 @@ if (isset($_POST['tambah'])) {
       <div class="form-group">
         <label for="gambar" class="form-label">Gambar Produk</label>
         <input type="file" class="form-control" name="gambar" id="gambar" onchange="previewImage()">
-        <img src="img/usm.png" alt="Preview Gambar" class="img-preview mt-3" width="100">
+        <img src="img/image.png" alt="Preview Gambar" class="img-preview mt-3" width="100">
       </div>
       <div class="form-group">
         <label for="nama" class="form-label">Nama Produk</label>

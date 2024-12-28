@@ -52,7 +52,7 @@ $produk = query("SELECT * FROM produk WHERE id = $id");
       display: block;
       margin: auto;
       text-align: center;
-      width: 300px;
+      width: 250px;
     }
     ul li strong {
       width: 100px;

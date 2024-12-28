@@ -14,6 +14,7 @@ if (isset($_POST['cari'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,10 +52,8 @@ if (isset($_POST['cari'])) {
     }
 
     .table td,
-    .table th {
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
+    .table th {}
+
     .table td img {
       width: 100px;
       height: 60px;
@@ -83,8 +82,29 @@ if (isset($_POST['cari'])) {
     tr {
       color: #f8f9fa;
     }
+
+    tbody {
+      display: block;
+      max-height: 380px;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    tbody ::-webkit-scrollbar {
+      display: none;
+
+    }
+
+    .table thead,
+    .table tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="card p-4" style="background: transparent; border: 2px solid rgba(255, 255, 255, .5); border-radius: 20px; backdrop-filter: blur(20px); box-shadow: 0 0 30px rgba(0, 0, 0, .5);">
@@ -134,4 +154,5 @@ if (isset($_POST['cari'])) {
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
